@@ -37,37 +37,44 @@ public class Theatre {
         System.out.println("\n3. Распределяю актёров");
         show.addActor(a1);
         show.addActor(a2);
-        show.addActor(a3);
-        show.addActor(a4);
-        show.addActor(a5);
+        opera.addActor(a3);
+        opera.addActor(a4);
+        ballet.addActor(a5);
+        ballet.addActor(a6);
 
-        ballet.addActor(a2);
 
         System.out.println("4. Для каждого спектакля вывожу список актёров");
         System.out.println(show.getActors());
-        // В opera еще нет актёров
         System.out.println(opera.getActors());
         System.out.println(ballet.getActors());
 
-        // Добавляем добавленного актера
+        System.out.println("5. Заменяю актёра в одном из спектаклей на актёра из другого спектакля и ещё раз");
+        show.replaceActor(a1, a5);
+        ballet.replaceActor(a6, a2);
 
-        show.addActor(a4);
+        show.replaceActor(a5, a1);
+        ballet.replaceActor(a2, a6);
 
-        // Добавляю одного актёра во все представления
-        ballet.addActor(a3);
-        opera.addActor(a3);
-
-        // Замена актеров
-        ballet.replaceActor(a3, a6);
-        opera.replaceActor(a3, a1);
+        System.out.println("********* и вывожу список актеров всех шоу");
+        System.out.println(show.getActors());
+        System.out.println(opera.getActors());
+        System.out.println(ballet.getActors());
 
         // Попытка заменить несуществующего актёра
-        ballet.replaceActor(a1, a5);
+        System.out.println("5. Меняю несуществующих актёров");
+        ballet.replaceActor(a1, a2);
+        ballet.replaceActor(a3, a4);
+        opera.replaceActor(a1, a2);
+        opera.replaceActor(a5, a6);
+        show.replaceActor(a3, a4);
+        show.replaceActor(a5, a6);
 
         // Вывод текста Либретто
+        System.out.println("7. Для оперного и балетного спектакля выведите на экран текст либретто");
         System.out.println(opera.printLibrettoText());
         System.out.println(ballet.printLibrettoText());
 
+        System.out.println("Полная информация про выступления");
         // Полный вывод всех шоу
         System.out.println(show);
         System.out.println(opera);
