@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Theatre {
     public static void main(String[] args) {
+        System.out.println("\n1. Создаю актёров и режиссеров");
         // Актёры
         Actor a1 = new Actor("Иван", "Иванов", Gender.MALE, 180);
         Actor a2 = new Actor("Пётр", "Петров", Gender.MALE, 175);
@@ -26,21 +27,51 @@ public class Theatre {
         String lt1 = "Что-то непонятное.";
         String lt2 = "Что-то понятное и знакомое.";
 
+        System.out.println("\n2. Создаю спектакли");
         // 3 спектакля, обычный, опера, балет.
-
-
         Show show = new MusicalShow("Драма 3", 110, d2, new ArrayList<>(), m1, lt1);
         Opera opera = new Opera("Евгений Онегин", 150, d1, new ArrayList<>(), m2, lt1, 10);
         Ballet ballet = new Ballet("Лебединое озеро", 140, d1, new ArrayList<>(), m1, lt2, c2);
 
+        // Добавляем актёров
+        System.out.println("\n3. Распределяю актёров");
+        show.addActor(a1);
+        show.addActor(a2);
+        show.addActor(a3);
+        show.addActor(a4);
+        show.addActor(a5);
+
+        ballet.addActor(a2);
+
+        System.out.println("4. Для каждого спектакля вывожу список актёров");
+        System.out.println(show.getActors());
+        // В opera еще нет актёров
+        System.out.println(opera.getActors());
+        System.out.println(ballet.getActors());
+
+        // Добавляем добавленного актера
+
+        show.addActor(a4);
+
+        // Добавляю одного актёра во все представления
+        ballet.addActor(a3);
+        opera.addActor(a3);
+
+        // Замена актеров
+        ballet.replaceActor(a3, a6);
+        opera.replaceActor(a3, a1);
+
+        // Попытка заменить несуществующего актёра
+        ballet.replaceActor(a1, a5);
 
         // Вывод текста Либретто
+        System.out.println(opera.printLibrettoText());
+        System.out.println(ballet.printLibrettoText());
+
+        // Полный вывод всех шоу
         System.out.println(show);
         System.out.println(opera);
         System.out.println(ballet);
-
-        System.out.println(opera.printLibrettoText());
-        System.out.println(ballet.printLibrettoText());
 
     }
 }

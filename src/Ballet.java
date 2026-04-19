@@ -22,7 +22,7 @@ public class Ballet extends MusicalShow {
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
                 ",\n Длительность: " + duration + " мин." +
-                ",\n Хореограф - " + choreographer +
+                ",\n " + choreographer +
                 ",\n " + director +
                 ",\n " + getActors() + "\n ";
     }
