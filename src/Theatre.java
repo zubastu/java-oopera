@@ -14,7 +14,6 @@ public class Theatre {
         Director d1 = new Director("Сергей", "Бондарчук", Gender.MALE, 20);
         Director d2 = new Director("Валерия", "Гай Германика", Gender.FEMALE, 10);
 
-
         // Музыкальные авторы
         MusicAuthor m1 = new MusicAuthor("Пётр", "Чайковский", Gender.MALE);
         MusicAuthor m2 = new MusicAuthor("Людвиг", "Бетховен", Gender.MALE);
@@ -23,6 +22,25 @@ public class Theatre {
         Choreographer c1 = new Choreographer("Мариус", "Петипа", Gender.MALE);
         Choreographer c2 = new Choreographer("Юрий", "Григорович", Gender.MALE);
 
-        
+        // Либретто
+        String lt1 = "Что-то непонятное.";
+        String lt2 = "Что-то понятное и знакомое.";
+
+        // 3 спектакля, обычный, опера, балет.
+
+
+        Show show = new MusicalShow("Драма 3", 110, d2, new ArrayList<>(), m1, lt1);
+        Opera opera = new Opera("Евгений Онегин", 150, d1, new ArrayList<>(), m2, lt1, 10);
+        Ballet ballet = new Ballet("Лебединое озеро", 140, d1, new ArrayList<>(), m1, lt2, c2);
+
+
+        // Вывод текста Либретто
+        System.out.println(show);
+        System.out.println(opera);
+        System.out.println(ballet);
+
+        System.out.println(opera.printLibrettoText());
+        System.out.println(ballet.printLibrettoText());
+
     }
 }
