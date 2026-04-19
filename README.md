@@ -1,2 +1,2 @@
 # java-oopera
-Repository for homework project.
+Учебный проект по теме ООП.
