@@ -21,9 +21,9 @@ public class Ballet extends MusicalShow {
         return "Балет - " + this.getTitle()+
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
-                ",\n Длительность: " + duration + " мин." +
+                ",\n Длительность: " + this.getDuration() + " мин." +
                 ",\n " + choreographer +
-                ",\n " + director +
+                ",\n " + this.getDirector() +
                 ",\n " + getActors() + "\n ";
     }
 }

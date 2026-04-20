@@ -21,8 +21,8 @@ public class Opera extends MusicalShow {
         return "Опера - " + this.getTitle() +
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
-                ",\n Длительность: " + duration + " мин." +
-                ",\n " + director +
+                ",\n Длительность: " + this.getDuration() + " мин." +
+                ",\n " + this.getDirector() +
                 ",\n " + getActors() + "\n ";
     }
 }
