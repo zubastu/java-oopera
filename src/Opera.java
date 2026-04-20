@@ -18,7 +18,7 @@ public class Opera extends MusicalShow {
 
     @Override
     public String toString() {
-        return "Опера - " + title +
+        return "Опера - " + this.getTitle() +
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
                 ",\n Длительность: " + duration + " мин." +

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Show {
-    final String title;
+    private String title;
     final int duration;
     final Director director;
     ArrayList<Actor> listOfActors;
@@ -49,5 +49,9 @@ public class Show {
         } else {
             System.out.println("Чтобы добавить актёра, нужно выбрать его из списка участников и выбрать ему замену.");
         }
+    }
+
+    public String getTitle() {
+        return title;
     }
 }

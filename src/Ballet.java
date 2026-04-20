@@ -18,7 +18,7 @@ public class Ballet extends MusicalShow {
 
     @Override
     public String toString() {
-        return "Балет - " + title +
+        return "Балет - " + this.getTitle()+
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
                 ",\n Длительность: " + duration + " мин." +

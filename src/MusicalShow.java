@@ -22,7 +22,7 @@ public class MusicalShow extends Show {
 
     @Override
     public String toString() {
-        return "Музыкальное Шоу - " + title +
+        return "Музыкальное Шоу - " + this.getTitle() +
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
                 ",\n Длительность: " + duration + " мин." +
