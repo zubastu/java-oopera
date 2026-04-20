@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Opera extends MusicalShow {
-    int choirSize;
+    private int choirSize;
 
     public Opera(
             String title,
@@ -18,11 +18,15 @@ public class Opera extends MusicalShow {
 
     @Override
     public String toString() {
-        return "Опера - " + title +
-                ",\n " + musicAuthor +
-                ",\n Либретто текст - " + librettoText +
-                ",\n Длительность: " + duration + " мин." +
-                ",\n " + director +
+        return "Опера - " + this.getTitle() +
+                ",\n " + this.getMusicAuthor() +
+                ",\n Либретто текст - " + this.getLibrettoText() +
+                ",\n Длительность: " + this.getDuration() + " мин." +
+                ",\n " + this.getDirector() +
                 ",\n " + getActors() + "\n ";
+    }
+
+    public int getChoirSize() {
+        return choirSize;
     }
 }
