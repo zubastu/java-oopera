@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class MusicalShow extends Show {
-    final MusicAuthor musicAuthor;
-    final String librettoText;
+    private MusicAuthor musicAuthor;
+    private String librettoText;
 
     public MusicalShow(
             String title,
@@ -17,7 +17,7 @@ public class MusicalShow extends Show {
     }
 
     protected void printLibrettoText() {
-        System.out.println(this.librettoText);
+        System.out.println(this.getLibrettoText());
     }
 
     @Override
@@ -28,5 +28,13 @@ public class MusicalShow extends Show {
                 ",\n Длительность: " + this.getDuration() + " мин." +
                 ",\n " + this.getDirector() +
                 ",\n " + getActors() + "\n ";
+    }
+
+    public MusicAuthor getMusicAuthor() {
+        return musicAuthor;
+    }
+
+    public String getLibrettoText() {
+        return librettoText;
     }
 }
