@@ -71,8 +71,8 @@ public class Theatre {
 
         // Вывод текста Либретто
         System.out.println("7. Для оперного и балетного спектакля выведите на экран текст либретто");
-        System.out.println(opera.printLibrettoText());
-        System.out.println(ballet.printLibrettoText());
+        opera.printLibrettoText();
+        ballet.printLibrettoText();
 
         System.out.println("Полная информация про выступления");
         // Полный вывод всех шоу
