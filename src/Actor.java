@@ -10,9 +10,9 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return "Актёр - " + this.getName() + " " + surname + ", Рост (" + height + " см.).";
+        return "Актёр - " + this.getName() + " " + this.getSurname() + ", Рост (" + height + " см.).";
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

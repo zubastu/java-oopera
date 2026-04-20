@@ -2,8 +2,8 @@ import java.util.Objects;
 
 public class Person {
     private String name;
-    String surname;
-    Gender gender;
+    private String surname;
+    private Gender gender;
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;
@@ -25,5 +25,13 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(getName(), surname, gender);
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public Gender getGender() {
+        return gender;
     }
 }

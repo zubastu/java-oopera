@@ -5,6 +5,6 @@ public class Choreographer extends Person {
 
     @Override
     public String toString() {
-        return "Хореограф - " + this.getName() + " " + surname + ".";
+        return "Хореограф - " + this.getName() + " " + this.getSurname() + ".";
     }
 }

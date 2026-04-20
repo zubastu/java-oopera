@@ -33,52 +33,65 @@ public class Theatre {
         Opera opera = new Opera("Евгений Онегин", 150, d1, new ArrayList<>(), m2, lt1, 10);
         Ballet ballet = new Ballet("Лебединое озеро", 140, d1, new ArrayList<>(), m1, lt2, c2);
 
-        // Добавляем актёров
-        System.out.println("\n3. Распределяю актёров");
-        show.addActor(a1);
-        show.addActor(a2);
-        opera.addActor(a3);
-        opera.addActor(a4);
-        ballet.addActor(a5);
-        ballet.addActor(a6);
+//        // Добавляем актёров
+//        System.out.println("\n3. Распределяю актёров");
+//        show.addActor(a1);
+//        show.addActor(a2);
+//        opera.addActor(a3);
+//        opera.addActor(a4);
+//        ballet.addActor(a5);
+//        ballet.addActor(a6);
+//
+//
+//        System.out.println("4. Для каждого спектакля вывожу список актёров");
+//        System.out.println(show.getActors());
+//        System.out.println(opera.getActors());
+//        System.out.println(ballet.getActors());
+//
+//        System.out.println("5. Заменяю актёра в одном из спектаклей на актёра из другого спектакля и ещё раз");
+//        show.replaceActor(a1, a5);
+//        ballet.replaceActor(a6, a2);
+//
+//        show.replaceActor(a5, a1);
+//        ballet.replaceActor(a2, a6);
+//
+//        System.out.println("********* и вывожу список актеров всех шоу");
+//        System.out.println(show.getActors());
+//        System.out.println(opera.getActors());
+//        System.out.println(ballet.getActors());
+//
+//        // Попытка заменить несуществующего актёра
+//        System.out.println("5. Меняю несуществующих актёров");
+//        ballet.replaceActor(a1, a2);
+//        ballet.replaceActor(a3, a4);
+//        opera.replaceActor(a1, a2);
+//        opera.replaceActor(a5, a6);
+//        show.replaceActor(a3, a4);
+//        show.replaceActor(a5, a6);
+//
+//        // Вывод текста Либретто
+//        System.out.println("7. Для оперного и балетного спектакля выведите на экран текст либретто");
+//        opera.printLibrettoText();
+//        ballet.printLibrettoText();
+//
+//        System.out.println("Полная информация про выступления");
+//        // Полный вывод всех шоу
+//        System.out.println(show);
+//        System.out.println(opera);
+//        System.out.println(ballet);
+        Actor test1 = new Actor("Иван", "Тест", Gender.MALE, 180);
+        Actor test2 = new Actor("Пётр", "Тест", Gender.MALE, 175);
+        Actor test3 = new Actor("Анна", "Тест", Gender.FEMALE, 165);
+        Actor test4 = new Actor("Мария", "Тест", Gender.FEMALE, 170);
 
+        opera.addActor(test1);
+        opera.addActor(test2);
 
-        System.out.println("4. Для каждого спектакля вывожу список актёров");
-        System.out.println(show.getActors());
-        System.out.println(opera.getActors());
-        System.out.println(ballet.getActors());
+        opera.replaceActor(test1, test3);
+        opera.replaceActor(test2, test4);
 
-        System.out.println("5. Заменяю актёра в одном из спектаклей на актёра из другого спектакля и ещё раз");
-        show.replaceActor(a1, a5);
-        ballet.replaceActor(a6, a2);
-
-        show.replaceActor(a5, a1);
-        ballet.replaceActor(a2, a6);
-
-        System.out.println("********* и вывожу список актеров всех шоу");
-        System.out.println(show.getActors());
-        System.out.println(opera.getActors());
-        System.out.println(ballet.getActors());
-
-        // Попытка заменить несуществующего актёра
-        System.out.println("5. Меняю несуществующих актёров");
-        ballet.replaceActor(a1, a2);
-        ballet.replaceActor(a3, a4);
-        opera.replaceActor(a1, a2);
-        opera.replaceActor(a5, a6);
-        show.replaceActor(a3, a4);
-        show.replaceActor(a5, a6);
-
-        // Вывод текста Либретто
-        System.out.println("7. Для оперного и балетного спектакля выведите на экран текст либретто");
-        opera.printLibrettoText();
-        ballet.printLibrettoText();
-
-        System.out.println("Полная информация про выступления");
-        // Полный вывод всех шоу
-        System.out.println(show);
         System.out.println(opera);
-        System.out.println(ballet);
+
 
     }
 }
