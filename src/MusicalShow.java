@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class MusicalShow extends Show {
-    final MusicAuthor musicAuthor;
-    final String librettoText;
+    private MusicAuthor musicAuthor;
+    private String librettoText;
 
     public MusicalShow(
             String title,
@@ -16,17 +16,25 @@ public class MusicalShow extends Show {
         this.librettoText = librettoText;
     }
 
-    protected String printLibrettoText() {
-        return this.librettoText;
+    protected void printLibrettoText() {
+        System.out.println(this.getLibrettoText());
     }
 
     @Override
     public String toString() {
-        return "Музыкальное Шоу - " + title +
+        return "Музыкальное Шоу - " + this.getTitle() +
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
-                ",\n Длительность: " + duration + " мин." +
-                ",\n " + director +
+                ",\n Длительность: " + this.getDuration() + " мин." +
+                ",\n " + this.getDirector() +
                 ",\n " + getActors() + "\n ";
+    }
+
+    public MusicAuthor getMusicAuthor() {
+        return musicAuthor;
+    }
+
+    public String getLibrettoText() {
+        return librettoText;
     }
 }

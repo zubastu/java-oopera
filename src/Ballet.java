@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Ballet extends MusicalShow {
-    Choreographer choreographer;
+    private Choreographer choreographer;
 
     public Ballet(
             String title,
@@ -18,12 +18,16 @@ public class Ballet extends MusicalShow {
 
     @Override
     public String toString() {
-        return "Балет - " + title +
-                ",\n " + musicAuthor +
-                ",\n Либретто текст - " + librettoText +
-                ",\n Длительность: " + duration + " мин." +
-                ",\n " + choreographer +
-                ",\n " + director +
+        return "Балет - " + this.getTitle()+
+                ",\n " + this.getMusicAuthor() +
+                ",\n Либретто текст - " + this.getLibrettoText() +
+                ",\n Длительность: " + this.getDuration() + " мин." +
+                ",\n " + this.getChoreographer() +
+                ",\n " + this.getDirector() +
                 ",\n " + getActors() + "\n ";
+    }
+
+    public Choreographer getChoreographer() {
+        return choreographer;
     }
 }
