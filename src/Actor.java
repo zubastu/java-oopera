@@ -10,13 +10,12 @@ public class Actor extends Person {
 
     @Override
     public String toString() {
-        return "Актёр - " + this.getName() + " " + this.getSurname() + ", Рост (" + height + " см.).";
+        return "Актёр - " + getName() + " " + getSurname() + ", Рост (" + height + " см.).";
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Actor actor)) return false;
+        Actor actor = (Actor)o;
         if (!super.equals(o)) return false;
         return height == actor.height;
     }

@@ -8,7 +8,7 @@ public class Director extends Person {
 
     @Override
     public String toString() {
-        return "Режиссёр - " + this.getName() + " " + this.getSurname() + ".";
+        return "Режиссёр - " + getName() + " " + getSurname() + ".";
     }
 
     public int getNumberOfShows() {

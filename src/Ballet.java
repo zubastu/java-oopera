@@ -18,12 +18,12 @@ public class Ballet extends MusicalShow {
 
     @Override
     public String toString() {
-        return "Балет - " + this.getTitle()+
-                ",\n " + this.getMusicAuthor() +
-                ",\n Либретто текст - " + this.getLibrettoText() +
-                ",\n Длительность: " + this.getDuration() + " мин." +
-                ",\n " + this.getChoreographer() +
-                ",\n " + this.getDirector() +
+        return "Балет - " + getTitle()+
+                ",\n " + getMusicAuthor() +
+                ",\n Либретто текст - " + getLibrettoText() +
+                ",\n Длительность: " + getDuration() + " мин." +
+                ",\n " + getChoreographer() +
+                ",\n " + getDirector() +
                 ",\n " + getActors() + "\n ";
     }
 

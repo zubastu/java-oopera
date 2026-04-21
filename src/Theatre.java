@@ -36,7 +36,7 @@ public class Theatre {
         Ballet ballet = new Ballet("Лебединое озеро", 140, director1,
                 new ArrayList<>(), musicAuthor1, librettoText1, choreographer2);
 
-        // Добавляем актёров
+/*        // Добавляем актёров
         System.out.println("\n3. Распределяю актёров");
         show.addActor(actor1);
         show.addActor(actor2);
@@ -81,21 +81,23 @@ public class Theatre {
         // Полный вывод всех шоу
         System.out.println(show);
         System.out.println(opera);
-        System.out.println(ballet);
+        System.out.println(ballet);*/
         Actor test1 = new Actor("Иван", "Тест", Gender.MALE, 180);
         Actor test2 = new Actor("Пётр", "Тест", Gender.MALE, 175);
-        Actor test3 = new Actor("Анна", "Тест", Gender.FEMALE, 165);
-        Actor test4 = new Actor("Мария", "Тест", Gender.FEMALE, 170);
+        Actor test3 = new Actor("Анна", "Тест3", Gender.FEMALE, 165);
+        Actor test4 = new Actor("Мария", "Тест3", Gender.FEMALE, 170);
 
         opera.addActor(test1);
         opera.addActor(test2);
+        opera.addActor(test3);
+        opera.addActor(test4);
         // Not Contains
-        opera.replaceActor(test1, test3.getSurname());
-        opera.replaceActor(test2, test4.getSurname());
+        //opera.replaceActor(test1, test3.getSurname());
+        //opera.replaceActor(test2, test4.getSurname());
         // Contains
         opera.replaceActor(test3, test1.getSurname());
 
-        System.out.println(opera);
+        //System.out.println(opera);
 
 
     }
