@@ -26,7 +26,7 @@ public class Show {
         if (this.listOfActors.isEmpty()) {
             return "Актёры еще формируются.";
         }
-        for (Actor actor : this.listOfActors) {
+        for (Actor actor : listOfActors) {
             actors += "   " + actor.toString() + "\n";
         }
         return actors;
@@ -34,33 +34,35 @@ public class Show {
 
     public void addActor(Actor actor) {
         if (this.listOfActors.contains(actor)) {
-            System.out.println(actor + " уже участвует в " + this.getTitle() + " .");
+            System.out.println(actor + " уже участвует в " + getTitle() + " .");
             return;
         }
         this.listOfActors.add(actor);
-        System.out.println(actor + " успешно добавлен в состав актёров произведения " + this.getTitle());
+        System.out.println(actor + " успешно добавлен в состав актёров произведения " + getTitle());
     }
 
     public void replaceActor(Actor newActor, String actorSurname) {
         if (newActor != null && actorSurname != null) {
-            if (this.listOfActors.contains(newActor)) {
-                System.out.println("Актёр уже участвует.");
+            int surnameEqualsCounter = 0;
+            int replaceIndex = -1;
+            for (Actor actor : listOfActors) {
+                if (actor.getSurname().equals(actorSurname)) {
+                    surnameEqualsCounter++;
+                    replaceIndex = listOfActors.indexOf(actor);
+                }
+            }
+
+            if (surnameEqualsCounter > 1) {
+                System.out.println("В спектакле по фамилии " + actorSurname + " есть несколько человек, заменить не получится.");
+                return;
+            } else if (surnameEqualsCounter == 0) {
+                System.out.println("Актёра с такой фамилией нет.");
                 return;
             }
 
-            for (Actor actor : this.listOfActors) {
-                if (actor.getSurname().equals(newActor.getSurname())) {
-                    System.out.println("Нельзя добавить актёра с одной фамилией.");
-                    return;
-                }
-
-                if (actor.getSurname().equals(actorSurname)) {
-                    int index = this.listOfActors.indexOf(actor);
-                    this.listOfActors.set(index, newActor);
-                    System.out.println("Актёр " + newActor + " заменён на " + actorSurname + " успешно.");
-                } else {
-                    System.out.println("Актера с такой фамилией нет.");
-                }
+            if (replaceIndex > -1 && surnameEqualsCounter == 1) {
+                listOfActors.set(replaceIndex, newActor);
+                System.out.println("Актёр успешно заменён.");
             }
         } else {
             System.out.println("Чтобы добавить актёра, нужно выбрать его из списка участников и выбрать ему замену.");

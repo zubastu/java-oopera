@@ -17,16 +17,16 @@ public class MusicalShow extends Show {
     }
 
     protected void printLibrettoText() {
-        System.out.println(this.getLibrettoText());
+        System.out.println(getLibrettoText());
     }
 
     @Override
     public String toString() {
-        return "Музыкальное Шоу - " + this.getTitle() +
+        return "Музыкальное Шоу - " + getTitle() +
                 ",\n " + musicAuthor +
                 ",\n Либретто текст - " + librettoText +
-                ",\n Длительность: " + this.getDuration() + " мин." +
-                ",\n " + this.getDirector() +
+                ",\n Длительность: " + getDuration() + " мин." +
+                ",\n " + getDirector() +
                 ",\n " + getActors() + "\n ";
     }
 

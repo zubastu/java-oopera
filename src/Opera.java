@@ -18,11 +18,11 @@ public class Opera extends MusicalShow {
 
     @Override
     public String toString() {
-        return "Опера - " + this.getTitle() +
-                ",\n " + this.getMusicAuthor() +
-                ",\n Либретто текст - " + this.getLibrettoText() +
-                ",\n Длительность: " + this.getDuration() + " мин." +
-                ",\n " + this.getDirector() +
+        return "Опера - " + getTitle() +
+                ",\n " + getMusicAuthor() +
+                ",\n Либретто текст - " + getLibrettoText() +
+                ",\n Длительность: " + getDuration() + " мин." +
+                ",\n " + getDirector() +
                 ",\n " + getActors() + "\n ";
     }
 
